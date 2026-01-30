@@ -1,0 +1,157 @@
+/* 全局样式 & CSS变量定义 - 统一管理指定的四种颜色 */
+:root {
+    /* 核心配色变量（对应指定的四种颜色） */
+    --color-primary: #B5173C;    /* 酒红色 - 主强调色 */
+    --color-secondary: #1C4273;  /* 深蓝色 - 主文字色 */
+    --color-bg: #D9EDE9;         /* 浅灰蓝 - 基础背景色 */
+    --color-accent: #97CED8;     /* 浅蓝 - 辅助装饰色 */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* 字体：保留原有配置 */
+    font-family: "Source Han Serif SC", "Noto Serif SC", "Microsoft YaHei", "微软雅黑", SimHei, "黑体", Inter, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--color-secondary); /* 使用CSS变量 */
+    /* 背景渐变：基于指定的浅灰蓝扩展，柔和不突兀 */
+    background: linear-gradient(135deg, var(--color-bg), #e8f4f5);
+    min-height: 100vh; /* 保证渐变背景铺满整个页面 */
+}
+
+/* 容器 - 统一页面宽度和居中 */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 2px 10px rgba(151, 206, 216, 0.3); /* 保留原有阴影（基于accent色） */
+    border-radius: 8px;
+}
+
+/* 头部 */
+header {
+    text-align: center;
+    padding: 40px 0;
+    border-bottom: 3px solid var(--color-primary); /* 使用CSS变量 */
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 36px;
+    color: var(--color-primary); /* 使用CSS变量 */
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+header p {
+    font-size: 18px;
+    color: var(--color-secondary); /* 使用CSS变量 */
+    margin-bottom: 20px;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* 适配小屏幕 */
+}
+
+header nav a {
+    color: var(--color-secondary); /* 使用CSS变量 */
+    text-decoration: none;
+    transition: all 0.3s;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+header nav a:hover {
+    color: white;
+    background-color: var(--color-primary); /* 使用CSS变量 */
+}
+
+/* 主要内容 */
+main {
+    padding: 20px 0;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    font-size: 24px;
+    color: var(--color-secondary); /* 使用CSS变量 */
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--color-accent); /* 使用CSS变量 */
+    font-weight: 600;
+}
+
+section h3 {
+    font-size: 20px;
+    color: var(--color-primary); /* 使用CSS变量 */
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+section p {
+    margin-bottom: 10px;
+    color: var(--color-secondary); /* 使用CSS变量 */
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+section ul {
+    list-style-position: inside;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+section li {
+    margin-bottom: 8px;
+    color: var(--color-secondary); /* 使用CSS变量 */
+    font-size: 16px;
+}
+
+/* 项目/教育经历卡片 */
+article {
+    background: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 4px solid var(--color-accent); /* 使用CSS变量 */
+    border-radius: 4px;
+    transition: box-shadow 0.3s;
+}
+
+article:hover {
+    box-shadow: 0 2px 8px rgba(151, 206, 216, 0.5);
+}
+
+/* 兴趣爱好图片样式 */
+.hobby-img {
+    max-width: 300px;
+    height: auto;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 2px solid var(--color-accent); /* 使用CSS变量 */
+    transition: transform 0.3s;
+}
+/* 图片悬浮轻微放大，增加交互 */
+.hobby-img:hover {
+    transform: scale(1.02);
+}
+
+/* 页脚 */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid var(--color-accent); /* 使用CSS变量 */
+    color: var(--color-secondary); /* 使用CSS变量 */
+    font-size: 14px;
+    margin-top: 40px;
+}
