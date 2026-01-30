@@ -1,6 +1,4 @@
-/* 全局样式 & CSS变量定义 - 统一管理指定的四种颜色 */
 :root {
-    /* 核心配色变量（对应指定的四种颜色） */
     --color-primary: #B5173C;    /* 酒红色 - 主强调色 */
     --color-secondary: #1C4273;  /* 深蓝色 - 主文字色 */
     --color-bg: #D9EDE9;         /* 浅灰蓝 - 基础背景色 */
@@ -14,7 +12,6 @@
 }
 
 body {
-    /* 字体：保留原有配置 */
     font-family: "Source Han Serif SC", "Noto Serif SC", "Microsoft YaHei", "微软雅黑", SimHei, "黑体", Inter, Helvetica, Arial, sans-serif;
     line-height: 1.6;
     color: var(--color-secondary); /* 使用CSS变量 */
